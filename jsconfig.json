@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/atoms/*": ["components/atoms/*"],
+      "@/atoms": ["components/atoms/index.js"],
+      "@/layouts/*": ["components/layouts/*"],
+      "@/layouts": ["components/layouts/index.js"],
+      "@/molecules/*": ["components/molecules/*"],
+      "@/molecules": ["components/molecules/index.js"],
+      "@/organisms/*": ["components/organisms/*"],
+      "@/organisms": ["components/organisms/index.js"],
+      "@/providers/*": ["components/providers/*"],
+      "@/providers": ["components/providers/index.js"],
+      "@/lib/*": ["lib/*"],
+      "@/lib": ["lib/index.js"],
+      "@/styles/*": ["styles/*"],
+      "@/models/*": ["models/*"],
+      "@/prisma": ["lib/prisma.js"],
+      "@/graphql/*": ["graphql/*"],
+      "@/hooks/*": ["hooks/*"]
+    }
+  }
+}

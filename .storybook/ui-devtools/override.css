@@ -1,0 +1,30 @@
+/* Linux OS specific scrollbar override */
+#devtools::-webkit-scrollbar {
+  width: 8px;
+}
+
+#devtools::-webkit-scrollbar-track {
+  background: #f8f8f8;
+}
+
+#devtools::-webkit-scrollbar-thumb {
+  background: #efefef;
+}
+
+#devtools::-webkit-scrollbar-thumb:hover {
+  background: #e7e6e6;
+}
+
+/* Sidebar remains full height when 
+   storybook preview is zoomed (in/out) 
+*/
+#devtools {
+  height: 100%;
+}
+
+/* Remove vertical & horizontal scrollbars when 
+   UI-Devtools is added as a decorator (SB preview)
+*/
+.sb-show-main {
+  overflow: hidden;
+}

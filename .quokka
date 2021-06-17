@@ -1,0 +1,6 @@
+{
+  "babel": {
+    "presets": ["next/babel"]
+  },
+  "plugins": ["jsdom-quokka-plugin"]
+}
