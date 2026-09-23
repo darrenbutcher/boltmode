@@ -5,7 +5,7 @@ describe('App', () => {
   it('renders without crashing', () => {
     render(<App />)
     expect(
-      screen.getByRole('heading', { name: /welcome to boohoo ai/i })
+      screen.getByRole('heading', { name: /software for businesses/i })
     ).toBeInTheDocument()
   })
 })
