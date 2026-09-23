@@ -2,20 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
-  /* overflow-y: hidden;
-  overflow-x: hidden; */
-  /* background-color: #F8F5F4; */
-    /* background-color: #000000; */
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+::selection {
+  background: #46e39a;
+  color: #141618;
 }
 
 .scroll-stop {
   overflow-y: hidden !important;
   background: red !important;
+}
+
+@layer components {
+  .site-header {
+    top: env(safe-area-inset-top, 0px);
+    background-color: rgb(20 22 24 / 0.85);
+    backdrop-filter: blur(8px);
+  }
+
+  .backdrop-blur {
+    backdrop-filter: blur(8px);
+  }
+
+  .grid-bg {
+    background-image: linear-gradient(to right, rgb(236 235 230 / 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(236 235 230 / 0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 30% 20%, black 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse 80% 70% at 30% 20%, black 30%, transparent 75%);
+  }
+
+  .link-signal,
+  .link-iris {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+  }
+
+  .link-signal {
+    text-decoration-color: #46e39a;
+  }
+
+  .link-iris {
+    text-decoration-color: #b4a7ff;
+  }
+
+  .link-lg {
+    text-underline-offset: 8px;
+  }
+
+  .focus-ring:focus-visible {
+    outline: 2px solid #46e39a;
+    outline-offset: 2px;
+  }
+
+  .focus-ring:focus:not(:focus-visible) {
+    outline: none;
+  }
 }
